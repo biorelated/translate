@@ -1,0 +1,8 @@
+{
+	"name": "translate",
+	"description": "Translate DNA to amino acid",
+	"copyright": "Copyright © 2015, george",
+	"authors": ["george githinji"],
+	"dependencies": {
+	}
+}
