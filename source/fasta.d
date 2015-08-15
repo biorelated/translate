@@ -5,9 +5,27 @@ import std.exception;
 import std.algorithm;
 import std.string;
 
+immutable int[dchar] dnaEncoding;
+
+static this(){
+  dnaEncoding = ['A':0,'C':1,'G': 2,'T':3];
+}
+
 struct FastaRecord {
   string header;
   string sequence;
+
+  size_t size(){
+    return sequence.length;
+  }
+}
+
+int toBinary(dchar c){
+  return (c in dnaEncoding) ? dnaEncoding[c] : 5;
+}
+
+auto seq2Binary(string seq){
+  return seq.dup.map!(c=>toBinary(c));
 }
 
 auto fastaRecords(string filename) {

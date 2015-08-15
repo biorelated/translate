@@ -11,7 +11,6 @@ void print_aa(FastaRecord seq){
 
 void translate_file(string infile){
   auto seqs = fastaRecords(infile);
-
   foreach(FastaRecord rec; seqs.parallel){
     print_aa(rec);
   }
@@ -27,7 +26,7 @@ void main(string[] args){
       );
 
   /* if (helpInfo.helpWanted){ */
-    /* defaultGetoptPrinter("A program to translate DNA to Protein",helpInfo.options); }*/
+  /* defaultGetoptPrinter("A program to translate DNA to Protein",helpInfo.options); }*/
 
   if(exists(inputfile)) {
     translate_file(inputfile);

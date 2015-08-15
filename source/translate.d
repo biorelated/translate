@@ -23,6 +23,9 @@ int codon2aa(string codon){
 }
 
 //given a sequence string, translate it to a string of amino acids
+//TODO: refactor to a template function
 auto translate_seq(string seq){
   return to_codons(seq).map!(c => codon2aa(c)).map!(x => cast(char) x );
 }
+
+
