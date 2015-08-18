@@ -5,10 +5,12 @@ import std.stdio;
 import fasta;
 import translate;
 
+//prints the amino acid sequence to the stderr
 void print_aa(FastaRecord seq){
   writeln(">", seq.header,"\n",translate_seq(seq.sequence));
 }
 
+//read each entry in the file and translate in parallel
 void translate_file(string infile){
   auto seqs = fastaRecords(infile);
   foreach(FastaRecord rec; seqs.parallel){
@@ -16,6 +18,7 @@ void translate_file(string infile){
   }
 }
 
+//The main program
 void main(string[] args){
   string inputfile;
   string outputfile;
