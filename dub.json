@@ -1,8 +1,8 @@
 {
   "name": "translate",
-  "description": "Translate DNA to amino acid",
-  "copyright": "Copyright © 2015, george",
-  "authors": ["george githinji"],
+  "description": "Translate nucleotide sequences to protein sequences",
+  "copyright": "Copyright © 2015, George Githinji",
+  "authors": ["George Githinji"],
   "dependencies": {
   }
 }
